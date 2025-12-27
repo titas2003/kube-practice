@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-pod
+spec:
+  containers:
+    - name: nginx-env
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+      env:
+        - name: ENVIRONMENT
+          value: "dev"
+        - name: APP_VERSION
+          value: "1.0.1"
